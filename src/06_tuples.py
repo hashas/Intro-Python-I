@@ -34,11 +34,22 @@ print("Distance is: {:.2f}".format(dist(a, b)))
 
 # Write a function `print_tuple` that prints all the values in a tuple
 
+
 # YOUR CODE HERE
+
+def print_tuple(tup):
+	for x in tup:
+		print(x)
 
 t = (1, 2, 5, 7, 99)
 print_tuple(t)  # Prints 1 2 5 7 99, one per line
 
 # Declare a tuple of 1 element then print it
-u = (1)  # What needs to be added to make this work?
+# u = (1)  # What needs to be added to make this work?
+u = (1,) # added "," (see notes below)
 print_tuple(u)
+
+# when generating a one-element tuple if you write one object in (), the ()
+# will be ignored and not considered a tuple, therefore "," is required at
+# the end to generate one-element tuple
+# see link https://stackoverflow.com/questions/1455602/printing-tuple-with-string-formatting-in-python
